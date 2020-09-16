@@ -9,11 +9,11 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "snake": {
       "species": "'"${SPECIES}"'",
+      "name": "'"${NAME}"'",
+      "morph": "'"${MORPH}"'",
       "shed": "'"${SHED}"'",
       "fed": "'"${FED}"'"
-    }
   }'
 
 echo

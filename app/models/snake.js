@@ -5,12 +5,20 @@ const snakeSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  name: {
+    type: String,
+    required: true
+  },
+  morph: {
+    type: String,
+    required: true
+  },
   shed: {
-    type: Date,
+    type: String,
     required: true
   },
   fed: {
-    type: Date,
+    type: String,
     required: true
   },
   owner: {
