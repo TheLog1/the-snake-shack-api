@@ -1,7 +1,7 @@
 #!/bin/bash
 
 API="http://localhost:4741"
-URL_PATH="/reports"
+URL_PATH="/snakes"
 
 curl "${API}${URL_PATH}" \
   --include \
@@ -9,11 +9,10 @@ curl "${API}${URL_PATH}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
-    "report": {
+    "snake": {
       "species": "'"${SPECIES}"'",
-      "potency": "'"${POTENCY}"'",
-      "info": "'"${INFO}"'",
-      "medicallySignificant": "'"${MEDICALLYSIGNIFICANT}"'"
+      "shed": "'"${SHED}"'",
+      "fed": "'"${FED}"'"
     }
   }'
 

@@ -1,22 +1,16 @@
 const mongoose = require('mongoose')
 
-const reportSchema = new mongoose.Schema({
+const snakeSchema = new mongoose.Schema({
   species: {
     type: String,
     required: true
   },
-  potency: {
-    type: Number,
-    min: 0,
-    max: 10,
+  shed: {
+    type: Date,
     required: true
   },
-  info: {
-    type: String,
-    required: true
-  },
-  medicallySignificant: {
-    type: Boolean,
+  fed: {
+    type: Date,
     required: true
   },
   owner: {
@@ -28,4 +22,4 @@ const reportSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('Report', reportSchema)
+module.exports = mongoose.model('Snake', snakeSchema)
