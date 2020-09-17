@@ -60,11 +60,10 @@ router.get('/snakes/:id', requireToken, (req, res, next) => {
 // CREATE
 // POST /snakes
 router.post('/snakes', requireToken, (req, res, next) => {
-  const snake = req.body
   // set owner of new snake to be current user
-  snake.owner = req.user.id
+  req.body.snake.owner = req.user.id
 
-  Snake.create(snake)
+  Snake.create(req.body.snake)
     // respond to succesful `create` with status 201 and JSON of new "snake"
     .then(newSnake => {
       res.status(201).json({ snake: newSnake.toObject() })
@@ -90,7 +89,7 @@ router.patch('/snakes/:id', requireToken, removeBlanks, (req, res, next) => {
       requireOwnership(req, snake)
 
       // pass the result of Mongoose's `.update` to the next `.then`
-      return snake.updateOne(req.body)
+      return snake.updateOne(req.body.snake)
     })
     // if that succeeded, return 204 and no JSON
     .then(() => res.sendStatus(204))
