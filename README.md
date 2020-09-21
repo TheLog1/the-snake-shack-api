@@ -10,10 +10,10 @@ the particular snake and click update snake. And don't worry, if you get rid of 
 
 ## Important Links
 
-- [API Repo](https://github.com/TheLog1/the-snake-shack-api)
-- [Client Repo](https://github.com/TheLog1/the-snake-shack)
-- [Deployed API](peaceful-wave-30757.herokuapp.com/)
-- [Deployed Client](thelog1.github.io/the-snake-shack/)
+- api repo https://github.com/TheLog1/the-snake-shack-api
+- client repo https://github.com/TheLog1/the-snake-shack
+- api deployed https://peaceful-wave-30757.herokuapp.com/
+- client deployed https://thelog1.github.io/the-snake-shack/#/
 
 ## Planning
 
